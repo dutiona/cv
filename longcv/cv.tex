@@ -56,19 +56,18 @@
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\firstname{Michaël} % Your first name
-\familyname{ROYNARD} % Your last name
+\name{Michaël}{ROYNARD}
 
 % All information in this block is optional, comment out any lines you don't need
-\title{Doctorant au Laboratoire de Recherche de l’EPITA}
+\title{Chercheur postdoc au Laboratoire de Recherche de l'EPITA (LRE)}
 \address{5 rue d'Effiat, Bât. 4, App. 201}{91380 Chilly-Mazarin}
 \mobile{(+33) 6 44 24 65 76}
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
 \email{michaelroynard@gmail.com}
 %\email{michael.roynard@epita.fr}
-\homepage{fr.linkedin.com/in/micha\%C3\%ABl-roynard-4a572ab6}{Profil Linkedin} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
-\extrainfo{\href{https://github.com/dutiona/}{Profil Github}}%~\footnote{https://github.com/dutiona} \href{https://fr.linkedin.com/in/micha\%C3\%ABl-roynard-4a572ab6}{Linkedin}~\footnote{https://fr.linkedin.com/in/michaël-roynard-4a572ab6}}
+\homepage{dutiona.github.io}
+\extrainfo{\href{https://github.com/dutiona/}{Profil Github}}
 %\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 \quote{Programmation générique en C++ moderne pour le traitement d'images}
 
@@ -91,15 +90,15 @@
 {Le Kremlin-Bicêtre}
 {}
 {Intégration de l’équipe Image du LRE (anciennement LRDE) pour travailler, durant ma thèse, sur le projet \href{https://www.lre.epita.fr/wiki/Olena}{Olena} (Pylene). \'Etude des possibilités offertes par les nouvelles normes du langage C++, notamment en terme de généricité, pour améliorer la bibliothèque Olena qui a été écrite au début des années 2000.
-\begin{itemize}
-\item Recherche sur la taxonomie des différents types d'image ainsi que les différents canvas d'algorithmes.
-\item Design et implémentation des concepts relatifs au traitement d'images.
-\item Publications : An Image Processing Library in Modern C++: Getting Simplicity and Efficiency with Generic Programming in Reproducible Research in Pattern Recognition~\cite{roynard.2019.rrpr}.
-\item Recherche sur l'utilisation des vues pour le traitement d'images dans le but de relever le niveau d'abstraction à l'image (et non au pixel) pour une design d'application plus optimum~\cite{roynard.2022.gpce}.
-\item Recherche sur les ponts depuis Python pour pouvoir utiliser la bibliothèque C++ depuis un script Python (par exemple images NumPy, deeplearning, ...), avec pybind11.
-\item Méthodologie agile, utilisation d'outils DevOps pour CI/CD: CMake, Gitlab-ci, Conan, Docker, Artifactory, etc.
-\item Expérience d'enseignement (C++, Théorie des langages rationnels, Base de données, Algorithmie).
-\end{itemize}
+	\begin{itemize}
+		\item Recherche sur la taxonomie des différents types d'image ainsi que les différents canvas d'algorithmes.
+		\item Design et implémentation des concepts relatifs au traitement d'images.
+		\item Publications : An Image Processing Library in Modern C++: Getting Simplicity and Efficiency with Generic Programming in Reproducible Research in Pattern Recognition~\cite{roynard.2019.rrpr}.
+		\item Recherche sur l'utilisation des vues pour le traitement d'images dans le but de relever le niveau d'abstraction à l'image (et non au pixel) pour une design d'application plus optimum~\cite{roynard.2022.gpce}.
+		\item Recherche sur les ponts depuis Python pour pouvoir utiliser la bibliothèque C++ depuis un script Python (par exemple images NumPy, deeplearning, ...), avec pybind11.
+		\item Méthodologie agile, utilisation d'outils DevOps pour CI/CD: CMake, Gitlab-ci, Conan, Docker, Artifactory, etc.
+		\item Expérience d'enseignement (C++, Théorie des langages rationnels, Base de données, Algorithmie).
+	\end{itemize}
 }
 
 
@@ -109,21 +108,21 @@
 {Paris 16\up{ème}}
 {1 an et 5 mois}
 {Développeur au sein de l'équipe dédiée aux produits financiers relatifs aux changes de monnaies. Développement en C++/Python/Groovy de logique métier relative au marché financier et d'outils permettant d'améliorer la productivité au quotidien. Membre du collectif d'experts C++ de la société.
-\begin{itemize}
-\item Écriture d'outils d'intégration continue :
 	\begin{itemize}
-	\item Analyse statique du code et refactoring automatisé avec Clang.
-	\item Écriture et mise en place du serveur d'intégration continue Jenkins, écriture de pipelines spécifiques au workflow de notre équipe.
-    \item Utilisation avancée d'outils de gestion de versions : git (intégrée à Atlassian Stash) et Perforce. Branchement de ces outils sur Jenkins dans le workflow de l'équipe.
-	\item Sensibilisation aux problématiques liées au système de build et de packaging.
-	\end{itemize}
-\item Conception et design des nouvelles API (Application Programming Interface) ainsi que leur refonte des anciennes dans le but d'appliquer au maximum les principes SOLID et la loi de Déméter.
-\item Développement et débuggage de nombreuses fonctionnalités sur une base de code legacy très conséquente.
-\item Utilisation de techniques de refactoring en vue de rendre le code testable unitairement et d'inverser les dépendances pour extraire des fonctionnalités derrière des interfaces.
-\item Écriture de tests unitaires (gtest) et de tests d'intégration (fitnesse).
-\item Membre de la \og community of practice \fg nommée CppChapter dans le but de promouvoir le C++ moderne au sein des développeurs de la société (veille technologique permanente, organisation de conférences internes et externes : hébergement de Meetup liées au C++).
-\item Sensibilisation à la cross compilation avec gcc, msvc, solaris cc et clang sur linux, windows et solaris (sparc) ainsi qu'à leur support \og maison \fg ~des nouvelles normes.
-\end{itemize}}
+		\item Écriture d'outils d'intégration continue :
+		      \begin{itemize}
+			      \item Analyse statique du code et refactoring automatisé avec Clang.
+			      \item Écriture et mise en place du serveur d'intégration continue Jenkins, écriture de pipelines spécifiques au workflow de notre équipe.
+			      \item Utilisation avancée d'outils de gestion de versions : git (intégrée à Atlassian Stash) et Perforce. Branchement de ces outils sur Jenkins dans le workflow de l'équipe.
+			      \item Sensibilisation aux problématiques liées au système de build et de packaging.
+		      \end{itemize}
+		\item Conception et design des nouvelles API (Application Programming Interface) ainsi que leur refonte des anciennes dans le but d'appliquer au maximum les principes SOLID et la loi de Déméter.
+		\item Développement et débuggage de nombreuses fonctionnalités sur une base de code legacy très conséquente.
+		\item Utilisation de techniques de refactoring en vue de rendre le code testable unitairement et d'inverser les dépendances pour extraire des fonctionnalités derrière des interfaces.
+		\item Écriture de tests unitaires (gtest) et de tests d'intégration (fitnesse).
+		\item Membre de la \og community of practice \fg nommée CppChapter dans le but de promouvoir le C++ moderne au sein des développeurs de la société (veille technologique permanente, organisation de conférences internes et externes : hébergement de Meetup liées au C++).
+		\item Sensibilisation à la cross compilation avec gcc, msvc, solaris cc et clang sur linux, windows et solaris (sparc) ainsi qu'à leur support \og maison \fg ~des nouvelles normes.
+	\end{itemize}}
 
 %------------------------------------------------
 
@@ -133,15 +132,15 @@
 {Saclay}
 {9 mois}
 {Développeur multitâches au sein du DRT/LIST/DISC/LDI (Laboratoire de Développement Informatique) sur le logiciel de contrôle non destructif CIVA.
-Développement en C++/Java/Python avec OpenCascade/VTK/ODE d'outils de modélisation mathématique (maths3D, moteurs physiques, simulations, ...) :
-\begin{itemize}
-\item Implémentation de nouvelles fonctionnalités
-\item Réalisation d'un visualisateur 3D en VTK.
-\item Optimisation de performance (algorithme de maillage de pièces CAO et mise en place de cache).
-\item Rédaction d'une documentation développeur.
-\item Débuggage du logiciel en vue d'une sortie de version majeure.
-\item Travail dans un laboratoire informatique moderne et dynamique.
-\end{itemize}}
+	Développement en C++/Java/Python avec OpenCascade/VTK/ODE d'outils de modélisation mathématique (maths3D, moteurs physiques, simulations, ...) :
+	\begin{itemize}
+		\item Implémentation de nouvelles fonctionnalités
+		\item Réalisation d'un visualisateur 3D en VTK.
+		\item Optimisation de performance (algorithme de maillage de pièces CAO et mise en place de cache).
+		\item Rédaction d'une documentation développeur.
+		\item Débuggage du logiciel en vue d'une sortie de version majeure.
+		\item Travail dans un laboratoire informatique moderne et dynamique.
+	\end{itemize}}
 
 %------------------------------------------------
 
@@ -151,14 +150,14 @@ Développement en C++/Java/Python avec OpenCascade/VTK/ODE d'outils de modélisa
 {Saclays}
 {6 mois}
 {Développement d’un module pour le logiciel CIVA permettant l’atterrissage d’un capteur sur une pièce à tester en prenant en compte les collisions et l’encombrement en utilisant un moteur physique :
-\begin{itemize}
-\item \'{E}tat de l’art sur les moteurs physiques existants
-\item Réalisation d’un benchmark pour déterminer quel moteur physique utiliser (et la faisabilité du problème avec ceux-ci).
-\item Mise au point et implémentation de l’algorithme en C++11 sous Visual studio 2013.
-\item Tests de performance et mise en forme sous une API
-\item Intégration dans CIVA
-\item Rédaction d’une documentation développeur
-\end{itemize}}
+	\begin{itemize}
+		\item \'{E}tat de l’art sur les moteurs physiques existants
+		\item Réalisation d’un benchmark pour déterminer quel moteur physique utiliser (et la faisabilité du problème avec ceux-ci).
+		\item Mise au point et implémentation de l’algorithme en C++11 sous Visual studio 2013.
+		\item Tests de performance et mise en forme sous une API
+		\item Intégration dans CIVA
+		\item Rédaction d’une documentation développeur
+	\end{itemize}}
 
 %------------------------------------------------
 
@@ -313,6 +312,6 @@ Développement en C++/Java/Python avec OpenCascade/VTK/ODE d'outils de modélisa
 \renewcommand{\refname}{Références bibliographiques}
 
 \bibliographystyle{abbrv}
-\bibliography{bibliography}
+\bibliography{../bibliography}
 
 \end{document}
