@@ -1,5 +1,5 @@
 BUNDLE_DIR = roynard.cv
-SUBDIRS = longcv shortcv
+SUBDIRS = longcv shortcv shortcv_en
 DEP = ./bibliography.bib
 
 all : $(SUBDIRS) tarball
@@ -10,6 +10,8 @@ ${BUNDLE_DIR}.tar.gz : $(SUBDIRS)
 	cp -f longcv/cv.embedded.pdf ${BUNDLE_DIR}/longcv.embedded.pdf
 	cp -f shortcv/cv.compressed.pdf ${BUNDLE_DIR}/shortcv.pdf
 	cp -f shortcv/cv.embedded.pdf ${BUNDLE_DIR}/shortcv.embedded.pdf
+	cp -f shortcv_en/cv.compressed.pdf ${BUNDLE_DIR}/shortcv_en.pdf
+	cp -f shortcv_en/cv.embedded.pdf ${BUNDLE_DIR}/shortcv_en.embedded.pdf
 	tar cvzf ${BUNDLE_DIR}.tar.gz ${BUNDLE_DIR}
 
 tarball : ${BUNDLE_DIR}.tar.gz
