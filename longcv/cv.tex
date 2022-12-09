@@ -29,11 +29,20 @@
 %\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 %\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
-\usepackage{natbib}
 \usepackage[T1]{fontenc} %
 \usepackage[utf8]{inputenc} % Packages de langue
 \usepackage[greek,french]{babel} %
 \usepackage{datetime}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage[backend=biber,
+            defernumbers=true,
+            sorting=ynt,
+            style=numeric,
+            %style=draft,
+            backref=true]{biblatex}
+
+\addbibresource{../bibliography.bib}
 
 \newdate{dateSoutenance}{04}{11}{2022}
 
@@ -58,10 +67,12 @@
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\author{Michaël ROYNARD}
 
 % All information in this block is optional, comment out any lines you don't need
-\title{Chercheur postdoc au Laboratoire de Recherche de l'EPITA (LRE)}
+\title{Michaël ROYNARD}
+\author{Chercheur postdocoral au Laboratoire de Recherche de l'EPITA (LRE)}
+%\abstract{
+%}
 %\address{5 rue d'Effiat, Bât. 4, App. 201}{91380 Chilly-Mazarin}
 %\mobile{(+33) 6 44 24 65 76}
 %\phone{(000) 111 1112}
@@ -79,11 +90,69 @@
 
 \maketitle % Print the CV title
 
+\noindent
+\begin{minipage}{.5\textwidth}
+  \textbf{Adresse professionnelle :} \\
+  EPITA --- LRE, 14-16 rue Voltaire, \\
+  94270, Le Kremlin-Bicêtre, France \\
+  \href{mailto:michael.roynard@epita.fr}{michael.roynard@epita.fr} \\
+  \href{https://www.linkedin.com/in/micha%C3%ABl-roynard-4a572ab6}{Profil Linkedin} | 
+  \href{https://orcid.org/0000-0001-8469-4131}{Profil Orcid} |
+  \href{https://www.lrde.epita.fr/wiki/User:Mroynard}{Page LRE}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \textbf{Adresse personnelle :} \\
+  5 rue d'Effiat, 91380 Chilly-Mazarin, France \\
+  +33 (0) 6 44 24 65 76 \\
+  \href{mailto:michaelroynard@gmail.com}{michaelroynard@gmail.com} \\
+  \href{https://dutiona.github.io}{Page perso : dutiona.github.io}
+\end{minipage}
+
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Formation}
+\section{Parcours universitaire}
+
+\subsection{Diplôme de docteur de la Sorbonne Université spécialité \emph{Génie logiciel et traitement d'images}}
+
+\noindent\emph{Sorbonne Université --- Paris 6 --- EDITE (ED130)\\
+  Laboratoire de Recherche de l'EPITA (LRE)} \\
+~\\
+\textbf{Encadrement :} \\
+~\\
+\begin{tabularx}{\textwidth}{l>{\centering\arraybackslash}Xr}
+  Pr. Thierry Géraud & EPITA, LRE & Directeur \\
+  \noalign{\vskip 0.3cm}
+  Dr. Edwin Carlinet & EPITA, LRE & Encadrant
+\end{tabularx}
+\bigskip
+
+\noindent\textbf{Jury :} \\
+~\\
+\begin{tabularx}{\textwidth}{l>{\centering\arraybackslash}Xr}
+  Pr. Hugues Talbot   & CentraleSupélec / Université Paris Saclay & Président    \\
+  \noalign{\vskip 0.3cm}
+  Pr. Benjamin Perret & ESIEE / LIGM / Université Gustave Eiffel  & Rapporteur   \\
+  Pr. Pascale Le Gall & CentraleSupélec / Université Paris Saclay & Rapporteur   \\
+  \noalign{\vskip 0.3cm}
+  Pr. Laurent Najman  & ESIEE / LIGM / Université Gustave Eiffel  & Examinateurs \\
+  Dr. Camille Kurtz   & LIPADE / SIP Lab / Université Paris Cité  & Examinateurs \\
+  Dr. Joël Falcou     & LRI / Université Paris Saclay             & Examinateurs
+\end{tabularx}
+\bigskip
+
+\noindent\textbf{Ressources :} \\
+\begin{itemize}
+  \item Disponible sur \href{https://www.theses.fr/s267380}{thèses.fr~\parencite{roynard.2022.phd}}.
+  \item \href{https://github.com/dutiona/thesis}{Lien github vers le manuscript + les slides}.
+\end{itemize}
+%~\\%
+%Ressources : \\
+%\begin{itemize}
+%	\item Disponible sur thèses.fr~\parencite{roynard.2022.phd}.
+%	\item \url{https://github.com/dutiona/thesis} (manuscript + slides)
+%\end{itemize}
 
 %\cventry{}
 %{Diplôme de docteur de la Sorbonne Université spécialité \emph{Génie logiciel et traitement d'images}}
@@ -114,7 +183,7 @@
 %	~\\%
 %	Ressources : \\
 %	\begin{itemize}
-%		\item Disponible sur thèses.fr~\cite{roynard.2022.phd}.
+%		\item Disponible sur thèses.fr~\parencite{roynard.2022.phd}.
 %		\item \url{https://github.com/dutiona/thesis} (manuscript + slides)
 %	\end{itemize}
 %}
@@ -143,8 +212,8 @@
 %	\begin{itemize}
 %		\item Recherche sur la taxonomie des différents types d'image ainsi que les différents canvas d'algorithmes.
 %		\item Design et implémentation des concepts relatifs au traitement d'images.
-%		\item Publications : An Image Processing Library in Modern C++: Getting Simplicity and Efficiency with Generic Programming in Reproducible Research in Pattern Recognition~\cite{roynard.2019.rrpr}.
-%		\item Recherche sur l'utilisation des vues pour le traitement d'images dans le but de relever le niveau d'abstraction à l'image (et non au pixel) pour une design d'application plus optimum~\cite{roynard.2022.gpce}.
+%		\item Publications : An Image Processing Library in Modern C++: Getting Simplicity and Efficiency with Generic Programming in Reproducible Research in Pattern Recognition~\parencite{roynard.2019.rrpr}.
+%		\item Recherche sur l'utilisation des vues pour le traitement d'images dans le but de relever le niveau d'abstraction à l'image (et non au pixel) pour une design d'application plus optimum~\parencite{roynard.2022.gpce}.
 %		\item Recherche sur les ponts depuis Python pour pouvoir utiliser la bibliothèque C++ depuis un script Python (par exemple images NumPy, deeplearning, ...), avec pybind11.
 %		\item Méthodologie agile, utilisation d'outils DevOps pour CI/CD: CMake, Gitlab-ci, Conan, Docker, Artifactory, etc.
 %		\item Expérience d'enseignement (C++, Théorie des langages rationnels, Base de données, Algorithmie).
@@ -341,7 +410,6 @@
 %
 \renewcommand{\refname}{Références bibliographiques}
 %
-%\bibliographystyle{abbrv}
-%\bibliography{../bibliography}
+\printbibliography[heading=bibintoc]
 %
 \end{document}
