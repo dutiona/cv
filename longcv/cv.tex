@@ -35,6 +35,7 @@
 \usepackage{datetime}
 \usepackage{hyperref}
 \usepackage{tabularx}
+\usepackage{microtype}
 \usepackage[backend=biber,
             defernumbers=true,
             sorting=ynt,
@@ -49,6 +50,12 @@
 \usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm, scale=0.65]{geometry}	% Régler finement les marges
 
 \usepackage{xcolor}												% Color box
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 %\usepackage[unicode=true,										%
 %pdftex,pdfborder={0 0 0},										%
 %bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,	% Pretty links in pdf
@@ -71,6 +78,7 @@
 % All information in this block is optional, comment out any lines you don't need
 \title{Michaël ROYNARD}
 \author{Chercheur postdocoral au Laboratoire de Recherche de l'EPITA (LRE)}
+\date{\today}
 %\abstract{
 %}
 %\address{5 rue d'Effiat, Bât. 4, App. 201}{91380 Chilly-Mazarin}
@@ -117,9 +125,9 @@
 \subsection{Diplôme de docteur de la Sorbonne Université spécialité \emph{Génie logiciel et traitement d'images}}
 
 \noindent\emph{Sorbonne Université --- Paris 6 --- EDITE (ED130)\\
-  Laboratoire de Recherche de l'EPITA (LRE)} \\
+  Laboratoire de Recherche de l'EPITA (LRE) --- Soutenu le \date{\displaydate{dateSoutenance}}} \\
 ~\\
-\textbf{Encadrement :} \\
+\noindent\textbf{Encadrement :} \\
 ~\\
 \begin{tabularx}{\textwidth}{l>{\centering\arraybackslash}Xr}
   Pr. Thierry Géraud & EPITA, LRE & Directeur \\
@@ -144,58 +152,20 @@
 
 \noindent\textbf{Ressources :} \\
 \begin{itemize}
-  \item Disponible sur \href{https://www.theses.fr/s267380}{thèses.fr~\parencite{roynard.2022.phd}}.
-  \item \href{https://github.com/dutiona/thesis}{Lien github vers le manuscript + les slides}.
+  \item Disponible sur \href{https://www.theses.fr/s267380}{thèses.fr~\parencite{roynard.2022.phd}}
+        (\href{https://dutiona.github.io/thesis/resume_long.pdf}{Résumé long}).
+  \item \href{https://github.com/dutiona/thesis}{Lien github} vers le
+        \href{https://dutiona.github.io/thesis/manuscript.pdf}{manuscrit} et les
+        \href{https://dutiona.github.io/thesis/slides.pdf}{slides}.
 \end{itemize}
-%~\\%
-%Ressources : \\
-%\begin{itemize}
-%	\item Disponible sur thèses.fr~\parencite{roynard.2022.phd}.
-%	\item \url{https://github.com/dutiona/thesis} (manuscript + slides)
-%\end{itemize}
 
-%\cventry{}
-%{Diplôme de docteur de la Sorbonne Université spécialité \emph{Génie logiciel et traitement d'images}}
-%{Sorbonne Université --- Paris 6 --- Laboratoire de Recherche de l'EPITA (LRE) --- EDITE (ED130)}
-%{Paris}
-%{}
-%{
-%	Intitulé de thèse : \emph{Programmation générique en C++ moderne pour le Traitement d'Images}. \\
-%	Soutenu le \displaydate{dateSoutenance}. \\
-%	\begin{table}[htbp]
-%		Encadrement : \\
-%		\begin{tabular}[width=\linewidth]{l|c|r}
-%			Pr. Thierry Géraud & EPITA, LRE & Directeur \\
-%			Dr. Edwin Carlinet & EPITA, LRE & Encadrant
-%		\end{tabular}
-%		Jury : \\
-%		\begin{tabular}[width=\linewidth]{l|c|r}
-%			Pr. Hugues Talbot   & CentraleSupélec / Université Paris Saclay & Président    \\
-%			\hline
-%			Pr. Benjamin Perret & ESIEE / LIGM / Université Gustave Eiffel  & Rapporteur   \\
-%			Pr. Pascale Le Gall & CentraleSupélec / Université Paris Saclay & Rapporteur   \\
-%			\hline
-%			Pr. Laurent Najman  & ESIEE / LIGM / Université Gustave Eiffel  & Examinateurs \\
-%			Dr. Camille Kurtz   & LIPADE / SIP Lab / Université Paris Cité  & Examinateurs \\
-%			Dr. Joël Falcou     & LRI / Université Paris Saclay             & Examinateurs
-%		\end{tabular}
-%	\end{table}
-%	~\\%
-%	Ressources : \\
-%	\begin{itemize}
-%		\item Disponible sur thèses.fr~\parencite{roynard.2022.phd}.
-%		\item \url{https://github.com/dutiona/thesis} (manuscript + slides)
-%	\end{itemize}
-%}
-%\cventry{}
-%{Diplôme d'ingénieur génie mathématique spécialité I3 - Image, Interaction, Immersion}
-%{EISTI --- École Internationale des Sciences du Traitement de l'Information}
-%{Cergy-Pontoise}
-%{}
-%{Diplômé en 2015}
-%
-%%\clearpage
-%
+
+\subsection{Diplôme d'ingénieur génie mathématique spécialité I3 - Image, Interaction, Immersion}
+
+\noindent\emph{EISTI --- École Internationale des Sciences du Traitement de l'Information --- Cergy-Pontoise --- Diplômé en 2015} \\
+
+\clearpage
+
 %%----------------------------------------------------------------------------------------
 %%	WORK EXPERIENCE SECTION
 %%----------------------------------------------------------------------------------------
