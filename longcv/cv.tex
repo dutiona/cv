@@ -189,7 +189,7 @@ années 2000.
         non de pixel lors de l'écrire de pipelines de traitement d'images~\parencite{roynard.2022.gpce}.
   \item Recherche sur le pont statique/dynamique entre Python et C++ pour pouvoir utiliser la bibliothèque générique
         template C++ depuis un programme Python (par exemple images NumPy, deeplearning, \ldots), avec pybind11.
-  \item Méthodologie agile, utilisation d'outils DevOps pour CI/CD: CMake, Gitlab-ci, Conan, Docker, Artifactory, etc.
+  \item Méthodologie agile, utilisation d'outils DevOps pour CI/CD : CMake, Gitlab-ci, Conan, Docker, Artifactory, etc.
   \item Expérience d'enseignement (C++, Théorie des langages rationnels, Base de données, Algorithmie).
 \end{itemize}
 
@@ -311,9 +311,97 @@ notions relatives aux différents types de polymorphisme et l'on s'attarde sur l
 l'attention des étudiants sur les parties de code évaluées à la compilation vs. celles évaluées au runtime à travers un
 projet où ils doivent coder des algorithmes génériques.
 
+\section{Autre}
+
+\subsection{Compétences}
+
+\begin{itemize}
+  \item Paradigmes : Programmation générique, fonctionnelle, procéduriale, orientée objet et agent
+  \item Conception : UML (différents diagrammes), design pattern, gestion de projet (V, Agile (Scrum))
+  \item Langages principaux : C++ (norme 2020), C, Python, Java, C\#, OpenGL, Cuda
+  \item Langage web : PHP, Javascript (jQuery \& NodeJS), SQL, XML, HTML, CSS
+  \item Tooling : CMake, Conan, Powershell, Bash, Python, Groovy (DSL Jenkins), Markdown, Latex
+  \item Autres : Scheme, programmation parallèle (OpenMP, MPI), programmation Android (JNI, NDK), Prolog, VHDL
+  \item OS : Linux, Windows, Mac OS
+  \item Virtualisation : Docker, VirtualBox, Packer, Vagrant
+  \item Travail collaboratif : Git (Github, gitlab), Perforce, SVN, Clearcase, Jira, Confluence, Bitbucket
+  \item IDE : Visual Studio, VS code, IntelliJ (IDEA, Pycharm, Clion), QtCreator, Eclipse, Vim, XCode
+  \item Ops : Installation de serveur,  mise en place de VPN, configuration \& routage, connaissances en sécurité informatique
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\subsection{Langues vivantes}
+
+\begin{itemize}
+  \item Français : Langue maternelle
+  \item Anglais : Courant. Score TOEIC 890 ; Plusieurs séjours à Swanage et à Londres.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\subsection{Centres d'intérêts}
+
+\begin{itemize}
+  \item Administration de serveurs dédiés à usage personnel
+  \item Musique : Pratique du saxophone pendant 10 ans
+  \item Sports : Badminton, ski, voile, randonnées
+\end{itemize}
+
 \clearpage
 
 \section{Recherche}
+
+Mon activité de recherche porte sur la Programmation Générique en C++ moderne appliqué au traitement d'image. Bien que
+l'intitulé soit vaste, nous avons délimité le périmètre de façon à ce qu'il y ait une cohérence au sein de mes
+contributions. La programmation générique en C++ moderne concerne principalement la généricité contrainte, qui
+s'implémentait via des hacks tel que le SFINAE, et qui peut désormais s'implémenter via des Concepts (C++20). Le
+traitement d'image concerne principalement les algorithmes de morphologie mathématique (érosion, fermeture, ligne de
+partage des eaux, etc.) et ne va pas aborder le machine/deep learning.
+
+Ma première contribution a consisté à réaliser une taxonomie des familles des types d'image ainsi que des algorithmes de
+traitement d'images. Nous expliquons, entre autres, la notion de concept et son application au domaine du traitement
+d'images. Nous expliquons comment extraire un concept d'un code existant et comment l'exploiter pour le rendre plus
+efficace et plus lisible. Nous proposons enfin notre point de vue sous la forme d'une collection de concepts liés au
+domaine du traitement d'images, mis à disposition dans Pylene~\parencite{carlinet.2018.pylene}. Ces concepts peuvent
+ensuite être utilisés pour implémenter des algorithmes de traitement d'image efficace et générique. Cette contribution a
+donné lieu à~\parencite{roynard.2019.rrpr}.
+
+Notre deuxième contribution est une généralisation du concept de Vues (tiré du langage C++, du travail sur les ranges
+  [32]) aux images. Cette contribution s'appuis sur le framework de concept, car les vues sont des images qui embarquent
+des algorithmes en leur sein. Les concepts permettent donc de caractériser correctement ces nouveaux types d'images. Les
+vues permettent la création d'images légères et peu coûteuses à copier. Cela permet également d'avoir une approche
+beaucoup plus simple pour concevoir une pipeline de traitement d'images en enchaînant les opérations directement dans le
+code de manière intuitive. Les ranges sont le ciment d'une nouvelle façon de designer des algorithmes pour faciliter
+l'utilisation des images, ce qui améliore donc leur aspect générique. Enfin, nous discutons du concept d'évaluation
+paresseuse et de l'impact des vues sur les performances. Cette contribution se traduit par l'implémentation d'un
+ensemble de vues de base, inspirés de la programmation fonctionnelle (transform, zip, filter, etc.), utiles pour le
+traitement d'image (clip, mask, etc.). Ces vues sont implémentées dans Pylene. Cette contribution a donné lieu
+à~\parencite{roynard.2022.gpce}.
+
+Notre troisième contribution est un travail expérimental un pont entre le monde statique et le monde dynamique. Le but
+est de trouver un moyen de donner accès aux fonctionnalités génériques d'un langage compilé (tel que C++) à un langage
+dynamique (tel que Python) pour faciliter le passage entre la phase de prototypage et la phase de production. En effet,
+pour parvenir à une communication efficace entre le code dynamique et le binaire de la bibliothèque statique, il faut
+être en mesure de concilier du code C++ générique dont la généricité est résolue au moment de la compilation (ce que
+nous appelons le << monde statique >>), et du code Python dynamique qui s'appuie sur des packages binaires pré-compilés
+(ce que nous appelons le << monde dynamique >>) : et cela n'est vraiment pas évident. D'autant plus que nous ne pouvons
+pas non plus exiger de l'utilisateur qu'il fournisse et utilise un compilateur à chaque fois qu'il veut utiliser notre
+bibliothèque depuis Python. Nous discutons quelles sont les solutions existantes qui peuvent être envisagées ainsi que
+leurs avantages et inconvénients. Enfin, nous discutons de la manière dont nous avons conçu et réalisé une solution
+hybride pour arriver à faire ce pont entre le monde statique et le monde dynamique.
+
+Notre recherche va continuer sur ce dernier axe, car la majorité de la communauté de traitement d'image fonctionne avec
+Python et il est donc très important de trouver un moyen pour toucher ces utilisateurs tout en gardant les avantages
+principaux de notre bibliothèque : la performance et la généricité.
+
+Enfin, nos travaux de recherche sont abordés en détail dans notre
+\href{https://dutiona.github.io/thesis/manuscript.pdf}{manuscrit de thèse}~\parencite{roynard.2022.phd}. Une synthèse
+est disponible dans le \href{https://dutiona.github.io/thesis/resume_long.pdf}{résumé long (en français)} de celui-ci.
 
 \clearpage
 
