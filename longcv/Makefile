@@ -2,8 +2,14 @@ TEX = latexmk --pdf -pdflatex="pdflatex --shell-escape"
 SRC = $(filter-out trash.tex, $(wildcard *.tex))
 PDF = $(SRC:.tex=.pdf)
 DEP = ../bibliography.bib
+PANDOC = pandoc --verbose
+SRCMD = $(filter-out README.md, $(wildcard *.md))
+PDFMD = $(SRCMD:.md=.pdf)
 
-all : $(PDF) compressed embedded
+all : $(PDF) $(PDFMD) compressed embedded
+
+%.pdf : %.md
+	$(PANDOC) $< -o $@
 
 %.pdf : %.tex ${DEP}
 	$(TEX) $< -jobname="$(basename $<)"
